@@ -6,8 +6,8 @@ fun main() {
     val vector1 =  Vector<Int>();
     val vector2 =  Vector<Int>();
 
-    //Row - Column
-    val matriz = Array(4) { IntArray(1) }
+    //Column - Row
+    val matriz = Array(2) {Array(5) {0} }
 
 
     println("A continuación introduce los valores de los vectores")
@@ -18,17 +18,13 @@ fun main() {
     //Meto los valores de los vectores en la matriz
 
     for (i in 0..4) {matriz[0][i] = vector1[i]}
-    for (i in 0..3) {matriz[1][i] = vector1[i]}
+    for (i in 0..3) {matriz[1][i] = vector2[i]}
 
 
     //Muestro la matriz
-    /*
-    for (j in 0 until 2){
-        for (i in 0 until matriz.size) {println(matriz[j][i])}
+    println("")
+    for (j in 0 until 2) {
+        for (i in 0 until 5) {print("["); print(matriz[j][i]); print("] "); if (i == 4) {println("")}}
     }
 
-     */
-    for (i in matriz.indices) {
-        println(matriz[i].contentToString())
-    }
 }
