@@ -12,7 +12,7 @@ fun main(){
     arrayAleatorios.sort(); println("Primer elemento: " + arrayAleatorios.first()); println("Último elemento: " + arrayAleatorios.last());
     println("Suma de elementos: " + arrayAleatorios.sum())
 
-    arrayAleatorios.forEach { if (arrayAleatorios[it]%2 != 0) {arrayAleatorios.removeAt(it)} }
+    arrayAleatorios.removeIf {it % 2 != 0}
 
     print("Elementos del array restantes: "); for (i in 0 until arrayAleatorios.size) {print("[");print(arrayAleatorios[i] ); print("]")}
 
